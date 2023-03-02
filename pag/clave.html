@@ -17,7 +17,7 @@
 			crossorigin="anonymous"
 		></script>
 		<title>BonSzabon-inicio</title>
-		<link rel="stylesheet" href="/estilo/css/estilo.css" />
+		<link rel="stylesheet" href="../estilo/css/estilo.css" />
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.all.min.js"></script>
 		<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.min.css" rel="stylesheet" />
 	</head>
@@ -26,35 +26,33 @@
 			<h1>BonSzabon</h1>
 			<h2>Tu banco de canfiansa</h2>
 		</div>
-		<div class="container text-center">
-			<div class="datosIngrso">
-				<div class="row mb-2 mt-5">
-					<label class="col-sm-3 col-form-label">Nombre y Apellido</label>
-					<div class="col-sm-9">
-						<input id="nombreApellido" type="text" class="form-control" />
-					</div>
-				</div>
-				<div class="row">
-					<label class="col-sm-2 col-form-label">DNI</label>
-					<div class="col-sm-10">
-						<input id="dni" type="text" class="form-control" />
-					</div>
-				</div>
+		<div class="clave p-4">
+			<label for="exampleInputPassword1" class="form-label">Password</label>
+			<input type="password" class="form-control clave_display" />
+		</div>
+		<div class="keyboard">
+			<div class="keyboard_row">
+				<div class="keyboard_row--key">1</div>
+				<div class="keyboard_row--key">2</div>
+				<div class="keyboard_row--key">3</div>
 			</div>
-			<div class="row p-2"></div>
-			<div class="row pt-5 justify-content-around">
-				<div class="col-4 d-grid">
-					<button id="ingresar" type="button" class="btn btn-primary btn-lg">INGRESAR</button>
-				</div>
+			<div class="keyboard_row">
+				<div class="keyboard_row--key">4</div>
+				<div class="keyboard_row--key">5</div>
+				<div class="keyboard_row--key">6</div>
 			</div>
-
-			<div class="row pt-3 justify-content-around">
-				<div class="col-4 d-grid">
-					<button id="nuevo" type="button" class="btn btn-primary btn-lg">NUEVO</button>
-				</div>
+			<div class="keyboard_row">
+				<div class="keyboard_row--key">7</div>
+				<div class="keyboard_row--key">8</div>
+				<div class="keyboard_row--key">9</div>
+			</div>
+			<div class="keyboard_row">
+				<div class="keyboard_row--key">*</div>
+				<div class="keyboard_row--key">0</div>
+				<div class="keyboard_row--key">#</div>
 			</div>
 		</div>
-		<script src="./js/clientes.js"></script>
-		<script src="./js/index.js"></script>
+		<script src="../js/clientes.js"></script>
+		<script src="../js/clave.js"></script>
 	</body>
 </html>
