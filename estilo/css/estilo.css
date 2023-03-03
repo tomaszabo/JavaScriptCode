@@ -19,42 +19,69 @@ main {
   align-items: center;
 }
 
-.clave {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.nav-bar {
+  border: 0cm;
+  border-bottom: 1px black solid;
 }
-.clave_display {
-  width: 200px;
+.nav-bar h1 {
+  color: #ffffff;
+}
+.nav-bar h2 {
+  color: #ffffff;
+}
+.nav-bar p {
+  color: #ffffff;
 }
 
-.keyboard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
 }
-.keyboard_row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.keyboard_row--key {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
+.grid-container .btn {
+  justify-self: center;
+  border: black 1px solid;
+  font-size: 22px;
   height: 50px;
-  background-color: #eee;
-  margin: 5px;
+  width: 250px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 600px;
+  margin: 0 auto;
+}
+form label {
+  font-weight: bold;
+}
+form input[type=text],
+form input[type=password] {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
   border-radius: 5px;
-  font-size: 24px;
+  box-sizing: border-box;
+  width: 100%;
+}
+form button[type=submit] {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
-.keyboard_row--key:active {
-  background-color: #ddd;
+form .error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 /*# sourceMappingURL=estilo.css.map */

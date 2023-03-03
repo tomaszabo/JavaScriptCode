@@ -1,6 +1,8 @@
-@use "../sass/base/reset.scss";
+@use "../sass/base/_reset.scss";
 
-@use "../sass/pag/index.scss";
+@use "../sass/pag/_index.scss";
 
-@use "../sass/pag/clave.scss";
+@use "../sass/pag/cuenta-usuario.scss";
+
+@use "../sass/pag/registro";
 
