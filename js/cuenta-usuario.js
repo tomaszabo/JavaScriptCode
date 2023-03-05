@@ -1,18 +1,15 @@
-const usuarioIng = document.getElementById("nombre-usuario-ing");
-const dniIng = document.getElementById("dni-usuario-ing");
 const extraccionCuentas = document.getElementById("extraccion");
 const depositoCuentas = document.getElementById("deposito");
-const combercionDivisa = document.getElementById("combercion");
+const comvercionDivisa = document.getElementById("comvercion");
 const tranferenciaCuenta = document.getElementById("tranferencia");
 const salirCuenta = document.getElementById("salir");
 
-const usuarioIngresoStora = localStorage.getItem("usuario");
-const usuarioCuenta = JSON.parse(usuarioIngresoStora);
+const usuarioCuenta = usuarioIngresado();
 
-usuarioIng.textContent = usuarioCuenta.nombre;
-dniIng.textContent = usuarioCuenta.dni;
+infoUsuario(usuarioIng, dniIng, usuarioCuenta);
 
-clickBoton(extraccionCuentas, "/pag/extracion.html");
-clickBoton(depositoCuentas,"/pag/deposito.html")
-clickBoton(combercionDivisa,"/pag/combersor.html")
-clickBoton(tranferenciaCuenta,"/pag/")
+clickBotonRedirecion(extraccionCuentas, "/pag/extracion.html");
+clickBotonRedirecion(depositoCuentas, "/pag/deposito.html");
+clickBotonRedirecion(comvercionDivisa, "/pag/comversor.html");
+clickBotonRedirecion(tranferenciaCuenta, "/pag/#");
+salirDeCuenta(salirCuenta, "/index.html");

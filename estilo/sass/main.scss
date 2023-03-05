@@ -1,8 +1,12 @@
 @use "../sass/base/_reset.scss";
 
+@use "../sass/Generales/nav-bar";
+
 @use "../sass/pag/_index.scss";
 
 @use "../sass/pag/cuenta-usuario.scss";
 
 @use "../sass/pag/registro";
+
+@use "../sass/pag/comversor"
 
