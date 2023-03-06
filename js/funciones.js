@@ -19,9 +19,12 @@ infoUsuario = (nombreElemento, dniElemento, usuario) => {
 	dniElemento.textContent = usuario.dni;
 };
 
-salirDeCuenta = (boton, pagian) => {
-	boton.onclick = () => {
+const botSalir = document.querySelectorAll(".salir")[0];
+const botVolver = document.querySelectorAll(".volver")[0];
+
+salirDeCuenta = () => {
+	botSalir.onclick = () => {
 		localStorage.removeItem("usuarioIngresado");
-		location.href = pagian;
+		location.href = "/index.html";
 	};
 };

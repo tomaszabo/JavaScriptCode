@@ -71,10 +71,13 @@ function convertir() {
 		};
 
 		const tasa = tarifas[deMoneda][aMoneda];
-		const resultado = monto * tasa; resultado.toFixed(2);
-		meQueda.value = resultadoSinDes;
+		const resultado = monto * tasa;
+		const resultadoSinDes = resultado.toFixed(2);
+		meQueda.value = parseFloat(resultadoSinDes);
 
-		let mequedaEnCuenta1 =parseFloat( tengoEnCuenta1 - monto);
+		// cuentas no funcioonan -------
+
+		let mequedaEnCuenta1 = tengoEnCuenta1 - monto;
 		let mequedaEnCuenta2 = tengoEnCuenta2 + resultadoSinDes;
 
 		Swal.fire({
@@ -89,9 +92,10 @@ function convertir() {
 		}).then((result) => {
 			if (result.isConfirmed) {
 				cuentas[deMoneda] = mequedaEnCuenta1;
-                console.log(cuentas[deMoneda])
 				cuentas[aMoneda] = mequedaEnCuenta2;
 			}
+
+			//editar array subir a local Storaje
 		});
 	} else {
 		meQueda.value = "";
@@ -104,7 +108,7 @@ function convertir() {
 		});
 		Toast.fire({
 			icon: "warning",
-			title: "infrese un monto",
+			title: "ingrese un monto",
 		});
 	}
 }
@@ -115,3 +119,6 @@ botonComvertir.addEventListener("click", convertir);
 
 monedaQueTengo.addEventListener("change", actualizarMontos);
 monedaQueQuiero.addEventListener("change", actualizarMontos);
+
+clickBotonRedirecion(botVolver, "/pag/cuenta-usuario.html");
+salirDeCuenta();
